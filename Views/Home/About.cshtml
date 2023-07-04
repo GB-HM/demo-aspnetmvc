@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2 class="mt-2">Sobre nosotros.</h2>
+<h3>La descripción de su negocio, de sus miembros importantes, de su oferta, todo lo necesario darse a conocer.</h3>
+
+
+
+
+@*
+    <div class="progress">
+        <div id="sans" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" val=0 style="width: 0%"></div>
+    </div>
+
+    @Html.Label("¿Cuántas fichas debo generar?", new { id = "prueba"})
+    @Html.TextBox("NumeroFichas", "", new { @type = "number", @min = 0, id = "NumeroFichas" })
+    <input type="submit" value="Buscar" id="Button" class="ui-button" , style="background-color: #0E97F3; color: black; width: 120px; border-radius: 5px; height: 40px; padding: 10px; font-size: medium; color: white;" />
+
+
+    <br />
+    <br />
+    <div id="prueba2">
+        <b>No sans undertale por favor</b>
+        <br />
+        <div id="resultado">
+            ):
+        </div>
+    </div>
+
+
+
+
+    <script>
+        jQuery(document).ready(function ($) {
+            var zapato = 0;
+
+            $('#Button').on("click", function () {
+                var cuenta = $('#NumeroFichas').val();
+                if (cuenta != null)
+                    crearFichas(cuenta);
+
+
+            })
+        });
+
+        function crearFichas(num) {
+            debugger
+            var nuevo = "<h1>Resultados<h1><br/>";
+
+            for (var i = 0; i <= num; i++) {
+                nuevo = nuevo + "<p>Resultado numero " + i + "<p>";
+            }
+            $('#resultado').empty();
+            var prueba = "<b>Appended text</b>";
+            $('#resultado').append(nuevo);
+            debugger
+        }
+
+        function loop() {
+            var zapato = $('#sans').attr('val');
+            if (zapato > 99) zapato = 0;
+            else zapato++;
+
+            var nuevoValor = "width: " + zapato + "%";
+            $('#sans').attr('style', nuevoValor)
+            $('#sans').attr('val', zapato)
+        }
+        setInterval(loop, 100);
+
+        /* Ejemplo de Ajax hacia
+        $.ajax({
+            type: "Post",
+            url: "/Calificacion/GetListaMateria?grado=" + grado,
+            contentType: "html",
+            success: function (response) {
+                $("#idMateria").empty();
+                $("#idMateria").append(response);
+            }
+
+        })
+        */
+    </script>*@
